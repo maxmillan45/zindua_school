@@ -1,0 +1,39 @@
+{% extends 'zindua/base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <h1 class="text-center mb-4">Contact Us</h1>
+        
+        <div class="card">
+            <div class="card-body">
+                <h5>Get in Touch</h5>
+                <p><strong>Address:</strong> Nairobi, Kenya</p>
+                <p><strong>Phone:</strong> +254 700 123 456</p>
+                <p><strong>Email:</strong> info@zinduaschool.ac.ke</p>
+                
+                <hr>
+                
+                <form method="POST" action="{% url 'contact' %}">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" name="name" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Message</label>
+                        <textarea name="message" class="form-control" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

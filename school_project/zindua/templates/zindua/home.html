@@ -1,0 +1,38 @@
+{% extends 'zindua/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="text-center py-5">
+    <h1 class="display-4">Welcome to Zindua School</h1>
+    <p class="lead">Your journey to excellence begins here</p>
+    <a href="{% url 'programmes' %}" class="btn btn-primary btn-lg">View Programmes</a>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Quality Education</h5>
+                <p class="card-text">We provide high-quality education to prepare students for success.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Expert Teachers</h5>
+                <p class="card-text">Learn from experienced professionals in their fields.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Modern Facilities</h5>
+                <p class="card-text">State-of-the-art facilities for better learning experience.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
